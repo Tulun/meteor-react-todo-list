@@ -1,4 +1,16 @@
 App = React.createClass({
+
+  // This mixin makes the getMeteorData method work
+  mixins: [ReactMeteorData],
+
+  // Loads items from Tasks collection and puts them on this.data.tasks
+
+  getMeteorData() {
+    return {
+      tasks: Tasks.find({}).fetch()
+    }
+  },
+
   getTasks() {
     return [
       { _id: 1, text: 'This is task 1' },
@@ -8,7 +20,7 @@ App = React.createClass({
   },
 
   renderTasks() {
-    return this.getTasks().map((task) => {
+    return this.data.tasks.map((task) => {
       return <Task key={task._id} task={task} />;
     });
   },

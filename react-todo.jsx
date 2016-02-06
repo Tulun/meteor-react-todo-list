@@ -1,3 +1,6 @@
+// Define a collection for Mongo.
+Tasks = new Mongo.Collection('tasks');
+
 if (Meteor.isClient) {
   // Client side JS.
 
@@ -6,5 +9,5 @@ if (Meteor.isClient) {
     React.render(<App />, document.getElementById('render-target'));
   });
 
-  
+
 }
