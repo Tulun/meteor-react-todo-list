@@ -13,5 +13,4 @@ if (Meteor.isClient) {
     ReactDOM.render(<App />, document.getElementById('render-target'));
   });
 
-
 }
