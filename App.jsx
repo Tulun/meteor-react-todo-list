@@ -62,7 +62,7 @@ App = React.createClass({
     });
 
     // Clear form
-    React.findDOMNode(this.refs.textInput).value =""
+    ReactDOM.findDOMNode(this.refs.textInput).value =""
   },
 
   toggleHideCompleted() {
